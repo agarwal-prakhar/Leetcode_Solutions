@@ -1,0 +1,34 @@
+C++
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        unordered_map<int,int>mp;
+         for(int i=0;i<nums.size();i++){
+            int a =nums[i];// 1,2,3,4  target 3 
+            if(mp.find(target - a) != mp.end()){
+                return {i,mp[target-a]};
+            } 
+            mp[a]=i;
+         }
+           return {};
+    }
+};
+
+
+C++
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        unordered_map<int,int>mp;
+         for(int i=0;i<nums.size();i++){
+            int a =nums[i];// 1,2,3,4  target 3 
+            if(mp.find(target - a) != mp.end()){
+                return {i,mp[target-a]};
+            } 
+            mp[a]=i;
+         }
+           return {};
+    }
+};
