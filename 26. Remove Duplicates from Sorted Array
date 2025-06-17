@@ -1,0 +1,14 @@
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        if (nums.empty()) return 0;                         // handle edge case
+        int slow = 0;                                       // last unique index
+        for (int fast = 1; fast < nums.size(); ++fast) {    // scan array once
+            if (nums[fast] != nums[slow]) {                 // found new value
+                ++slow;                                     // move unique slot
+                nums[slow] = nums[fast];                    // overwrite duplicate
+            }
+        }
+        return slow + 1;                                    // number of uniques
+    }
+};
